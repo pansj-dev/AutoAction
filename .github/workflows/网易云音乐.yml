@@ -28,6 +28,5 @@ jobs:
           SERVER_SCK: ${{ secrets.SCK }}
         run: |
           cd ~/WyyAction
-          git checkout main
           pip install -r requirements.txt
           python3 checkin.py
