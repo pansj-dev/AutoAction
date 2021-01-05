@@ -1,0 +1,44 @@
+name: 网易云音乐
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 0 0,12 * * * # At 00:00 and 12:00, every day
+  watch:
+    types: started
+  repository_dispatch:
+    types: start
+jobs:
+  build:      
+    runs-on: ubuntu-latest
+    if: github.event.repository.owner.id == github.event.sender.id
+    steps:
+      - name: Checkout
+        run: |
+          git clone https://github.com/allinu/wyy-action.git ~/WyyAction
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Cache node_modules
+        uses: actions/cache@v2 # 使用 GitHub 官方的缓存 Action。
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-${{ env.cache-name }}-${{ hashFiles('package-lock.json') }} # 使用 package-lock.json 的 Hash 作为缓存的 key。也可以使用 package.json 代替
+      - uses: actions/checkout@v2
+      - name: 初始化Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      - name: '运行 【网易云音乐签到及刷歌】'
+        env:
+          WYY_USER:  ${{ secrets.USER }}
+          WYY_PWD: ${{ secrets.PWD }}
+          SERVER_SCK: ${{ secrets.SCK }}
+        run: |
+          cd ~/WyyAction
+          git checkout main
+          pip install -r requirements.txt
+          python3 checkin.py
