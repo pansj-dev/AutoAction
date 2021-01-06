@@ -41,7 +41,7 @@ jobs:
           cd ~/TaskAction
           git checkout master
           npm install
-      - name: '运行 【聚看点长任务】'
+      - name: '运行 【聚看点任务】'
         if: env.JUKAN_BODY
         run: |
           cd ~/TaskAction/Task
