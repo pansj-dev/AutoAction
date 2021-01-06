@@ -24,10 +24,10 @@ jobs:
         QCZJ_videoBODY: ${{ secrets.QCZJ_videoBODY }}	        
         QCZJ_WelfarevideoBODY: ${{ secrets.QCZJ_WelfarevideoBODY }}	
         QCZJ_WelfareBODY: ${{ secrets.QCZJ_WelfareBODY }}	
-        QCZJ_addCoinBODY: ${{ secrets.addCoinBODY }}
-        QCZJ_addCoin2BODY: ${{ secrets.addCoin2BODY }}
-        QCZJ_reportAssHEADER: ${{ secrets.reportAssHEADER }}
-        QCZJ_reportAssBODY: ${{ secrets.reportAssBODY }}
+        QCZJ_addCoinBODY: ${{ secrets.QCZJ_addCoinBODY }}
+        QCZJ_addCoin2BODY: ${{ secrets.QCZJ_addCoin2BODY }}
+        QCZJ_reportAssHEADER: ${{ secrets.QCZJ_reportAssHEADER }}
+        QCZJ_reportAssBODY: ${{ secrets.QCZJ_reportAssBODY }}
         QCZJ_cointowalletBODY: ${{ secrets.QCZJ_cointowalletBODY }}
          
     steps:
