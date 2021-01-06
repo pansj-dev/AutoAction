@@ -32,6 +32,7 @@ jobs:
         if: env.YOUTH_HEADER
         run: |
           cd ~/youth
+          git checkout master
           npm install
       - name: '运行 【中青看点】'
         if: env.YOUTH_HEADER
