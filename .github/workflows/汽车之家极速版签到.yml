@@ -37,7 +37,20 @@ jobs:
           node qczjspeed.js
         env:
           TZ: Asia/shanghai
-          JUKAN_BODY: ${{ secrets.JUKAN_BODY }}
+          QCZJ_GetUserInfoURL: ${{ secrets.QCZJ_GetUserInfoURL }} 
+          QCZJ_GetUserInfoHEADER: ${{ secrets.QCZJ_GetUserInfoHEADER }} 
+          QCZJ_coinBODY: ${{ secrets.QCZJ_coinBODY }} 
+          QCZJ_taskBODY: ${{ secrets.QCZJ_taskBODY }} 
+          QCZJ_activityBODY: ${{ secrets.QCZJ_activityBODY }} 
+          addCoinBODY: ${{ secrets.addCoinBODY }} 
+          addCoin2BODY: ${{ secrets.addCoin2BODY }} 
+          reportAssHEADER: ${{ secrets.reportAssHEADER }} 
+          reportAssBODY: ${{ secrets.reportAssBODY }} 
+          cointowalletBODY: ${{ secrets.cointowalletBODY }} 
+          QCZJ_GoldcoinBODY: ${{ secrets.QCZJ_GoldcoinBODY }} 
+          QCZJ_videoBODY: ${{ secrets.QCZJ_videoBODY }} 
+          QCZJ_WelfarevideoBODY: ${{ secrets.QCZJ_WelfarevideoBODY }} 
+          QCZJ_WelfareBODY: ${{ secrets.QCZJ_WelfareBODY }} 
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
