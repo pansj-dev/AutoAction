@@ -44,7 +44,7 @@ jobs:
       - name: '运行 【聚看点长任务】'
         if: env.JUKAN_BODY
         run: |
-          cd ~/TaskAction/workflow
+          cd ~/TaskAction/Task
           node jukan.js
         env:
           TZ: Asia/shanghai
