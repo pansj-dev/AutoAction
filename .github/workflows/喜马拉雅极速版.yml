@@ -32,7 +32,20 @@ jobs:
           cd ~/xmlyspeed
           python3 xmly_speed.py 
         env:
-            XMLY_SPEED_COOKIE: ${{ secrets.XMLY_SPEED_COOKIE }}  #必须
+            QCZJ_GetUserInfoURL: ${{ secrets.QCZJ_GetUserInfoURL }} 
+            QCZJ_GetUserInfoHEADER: ${{ secrets.QCZJ_GetUserInfoHEADER }} 
+            QCZJ_coinBODY: ${{ secrets.QCZJ_coinBODY }} 
+            QCZJ_taskBODY: ${{ secrets.QCZJ_taskBODY }} 
+            QCZJ_activityBODY: ${{ secrets.QCZJ_activityBODY }} 
+            addCoinBODY: ${{ secrets.addCoinBODY }} 
+            addCoin2BODY: ${{ secrets.addCoin2BODY }} 
+            reportAssHEADER: ${{ secrets.reportAssHEADER }} 
+            reportAssBODY: ${{ secrets.reportAssBODY }} 
+            cointowalletBODY: ${{ secrets.cointowalletBODY }} 
+            QCZJ_GoldcoinBODY: ${{ secrets.QCZJ_GoldcoinBODY }} 
+            QCZJ_videoBODY: ${{ secrets.QCZJ_videoBODY }} 
+            QCZJ_WelfarevideoBODY: ${{ secrets.QCZJ_WelfarevideoBODY }} 
+            QCZJ_WelfareBODY: ${{ secrets.QCZJ_WelfareBODY }} 
             # XMLY_ACCUMULATE_TIME: ${{ secrets.XMLY_ACCUMULATE_TIME }} #非私密信息，去掉
             BARK: ${{ secrets.BARK }}     # bark服务
             SCKEY: ${{ secrets.SCKEY }}   # server酱服务
