@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: '克隆项目'
         run: |
-          git clone https://github.com/Zero-S1/xmly_speed.git ~/xmlyspeed
+          git clone https://github.com/pansj-dev/xmlyspeed.git ~/xmlyspeed
       - name: Checkout
         uses: actions/checkout@v2
         
