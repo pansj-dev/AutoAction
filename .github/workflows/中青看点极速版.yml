@@ -38,6 +38,7 @@ jobs:
         if: env.YOUTH_HEADER
         run: |
           cd ~/youth/Task
+          git checkout master
           node Task/youth.js
         env:
           YOUTH_NOTIFY_CONTROL: ${{ secrets.YOUTH_NOTIFY_CONTROL }}
