@@ -18,6 +18,10 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
     steps:
+      - name: '克隆项目'
+        if: env.JUKAN_BODY
+        run: |
+          git clone https://github.com/pansj-dev/AutoAction.git ~/TaskAction
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         if: env.JUKAN_BODY
@@ -34,10 +38,12 @@ jobs:
       - name: npm install
         if: env.JUKAN_BODY
         run: |
+          cd ~/TaskAction
           npm install
       - name: '运行 【聚看点长任务】'
         if: env.JUKAN_BODY
         run: |
+          cd ~/TaskAction
           node jukan.js
         env:
           TZ: Asia/shanghai
