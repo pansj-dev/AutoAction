@@ -42,11 +42,11 @@ jobs:
           QCZJ_coinBODY: ${{ secrets.QCZJ_coinBODY }} 
           QCZJ_taskBODY: ${{ secrets.QCZJ_taskBODY }} 
           QCZJ_activityBODY: ${{ secrets.QCZJ_activityBODY }} 
-          addCoinBODY: ${{ secrets.addCoinBODY }} 
-          addCoin2BODY: ${{ secrets.addCoin2BODY }} 
-          reportAssHEADER: ${{ secrets.reportAssHEADER }} 
-          reportAssBODY: ${{ secrets.reportAssBODY }} 
-          cointowalletBODY: ${{ secrets.cointowalletBODY }} 
+          QCZJ_addCoinBODY: ${{ secrets.addCoinBODY }} 
+          QCZJ_addCoin2BODY: ${{ secrets.addCoin2BODY }} 
+          QCZJ_reportAssHEADER: ${{ secrets.reportAssHEADER }} 
+          QCZJ_reportAssBODY: ${{ secrets.reportAssBODY }} 
+          QCZJ_cointowalletBODY: ${{ secrets.cointowalletBODY }} 
           QCZJ_GoldcoinBODY: ${{ secrets.QCZJ_GoldcoinBODY }} 
           QCZJ_videoBODY: ${{ secrets.QCZJ_videoBODY }} 
           QCZJ_WelfarevideoBODY: ${{ secrets.QCZJ_WelfarevideoBODY }} 
