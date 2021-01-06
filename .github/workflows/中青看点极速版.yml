@@ -22,7 +22,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/pansj-dev/Scripts.git ~/youth
+          git clone https://github.com/pansj-dev/Sunert.git ~/youth
       - uses: actions/checkout@v2
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
