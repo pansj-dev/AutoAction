@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: '克隆仓库'
         run: |
-          git clone https://github.com/ZhiYi-N/script.git ~/huoshan
+          git clone https://github.com/ZhiYi-N/Private-Script.git ~/huoshan
       - name: Checkout
         uses: actions/checkout@v2
         with:
