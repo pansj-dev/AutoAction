@@ -4,3 +4,5 @@ HOST,clubhouseprod.s3.amazonaws.com,Clubhouse
 HOST,clubhouse.pubnub.com,Clubhouse
 HOST,maintenance.joinclubhouse.com,Clubhouse
 HOST-KEYWORD,clubhouse,Clubhouse
+ip-cidr, 164.52.102.0/24, direct
+ip-cidr, 52.58.56.0/24, direct
